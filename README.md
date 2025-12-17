@@ -1,4 +1,5 @@
 # Indian Stock Market Predictor (NSE)
+## [Live Indian Stock Market Predictor](https://indian-stock-predictor.streamlit.app/)
 
 This project is an implementation of a **machine learning–based stock market prediction system** developed using Python and Streamlit. It provides an interactive web application where users can select NSE-listed stocks and obtain predictions for the **next trading day price direction (UP or DOWN)** along with an **estimated next-day price**.
 
