@@ -1,74 +1,33 @@
 # Indian Stock Market Predictor (NSE)
 
-
-This project is an implementation of a **machine learning–based stock market prediction system** developed using Python and Streamlit. It provides an interactive web application where users can select NSE-listed stocks and obtain predictions for the **next trading day price direction (UP or DOWN)** along with an **estimated next-day price**.
-
-The project demonstrates the application of **machine learning, feature engineering, and financial data analysis** using real-world stock market data.
+A machine learning–based web application that predicts **next-day price direction (UP/DOWN)** for NSE-listed stocks using **XGBoost** and historical market data.
 
 ---
 
-## Overview
-
-The project uses the **yfinance** library to fetch historical stock market data and applies the **XGBoost Classifier** to predict short-term price movement. Technical indicators such as **Simple Moving Average (SMA)**, **Exponential Moving Average (EMA)**, and **daily returns** are used to enhance the prediction process.
-
----
-
-## Why XGBoost is Used
-
-XGBoost  is used in this project because it is highly effective for **structured and tabular data** such as stock market prices. It can capture **non-linear relationships** between technical indicators and price movement, which are common in financial markets.
-
-Additionally, XGBoost provides:
-- High prediction accuracy with relatively small datasets  
-- Fast training and inference performance  
-- Built-in regularization to reduce overfitting  
-- Probabilistic confidence scores for classification  
-
-These properties make XGBoost suitable for **short-term directional stock prediction**.
+## Key Features
+- Next trading day direction prediction (UP / DOWN)
+- Estimated next-day price based on recent volatility
+- Technical indicators: SMA, EMA, daily returns
+- Interactive web app built with Streamlit
 
 ---
 
-## Features
-
-- Predicts next NSE trading day price direction (UP / DOWN)  
-- Estimates next-day stock price based on recent volatility  
-- Displays prediction confidence score  
-- Uses Indian Standard Time (IST) for market logic  
-- Automatically handles weekends  
-- Deployed as an interactive web application using Streamlit  
-
----
-
-## Technologies Used
-
-- **Language:** Python  
-- **Data Processing:** Pandas, NumPy  
-- **Machine Learning Library:** XGBoost (Gradient Boosting model), scikit-learn  
-- **Data Source:** yfinance (Yahoo Finance API)  
-- **Web Framework:** Streamlit  
-- **Application Type:** Web-based Machine Learning Application  
+## Tech Stack
+- Python, Pandas, NumPy
+- XGBoost, scikit-learn
+- yfinance (Yahoo Finance)
+- Streamlit
 
 ---
 
 ## How It Works
-
-1. The user selects one or more NSE-listed stocks from the interface.  
-2. Historical stock data is fetched using Yahoo Finance.  
-3. Technical indicators are computed through feature engineering.  
-4. An XGBoost model is trained on historical price movement data.  
-5. The model predicts the next-day price direction and confidence score.  
-6. An estimated next-day price is calculated using recent volatility.  
+Historical NSE data is fetched using Yahoo Finance, technical indicators are engineered, and an XGBoost classifier predicts short-term price movement with a confidence score.
 
 ---
 
-# Disclaimer
-- This project is intended **strictly for educational purposes** and **does not provide financial, trading, or investment advice**.  
-- The primary objective of this project is to demonstrate the usage of the **XGBoost algorithm**, which supports both **regression models (XGBRegressor)** and **classification models (XGBClassifier)** for predictive analysis.  
-
----
-
-##To Clone this Repository
-
+## How to Run
 ```bash
 git clone https://github.com/shreeshtjagga/indian-stock-predictor.git
 cd indian-stock-predictor
-
+pip install -r requirements.txt
+streamlit run app.py
